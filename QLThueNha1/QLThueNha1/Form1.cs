@@ -44,21 +44,59 @@ namespace QLThueNha1
         private void Xoa(object sender, EventArgs e)
         {
             Data_Provider.moKetNoi();
+
             DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             if (dr == DialogResult.Yes)
             {
                 int i = dataGridView1.CurrentCell.RowIndex;
-                int ma = int.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
-                string sql = string.Format("Delete from NHA where MaNha ='{0}'", ma);
-                Data_Provider.updateData(sql);
-                Load_NHA();
+                int ma;
+
+                // Kiểm tra và chuyển đổi giá trị cột đầu tiên thành số nguyên
+                if (int.TryParse(dataGridView1.Rows[i].Cells[0].Value.ToString(), out ma))
+                {
+                    // Nếu chuyển đổi thành công, thực hiện câu lệnh xóa
+                    string sql = string.Format("Delete from NHA where MaNha = {0}", ma);
+                    Data_Provider.updateData(sql);
+                    Load_NHA();
+                }
+                else
+                {
+                    // Nếu không thể chuyển đổi, hiển thị thông báo lỗi
+                    MessageBox.Show("Giá trị Mã Nhà không hợp lệ. Không thể xóa bản ghi.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+
             Data_Provider.dongKetNoi();
         }
 
         private void Sua(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Data_Provider.moKetNoi();
+            string sql1 = string.Format("Select count(*) from NHA where MaNha ='{0}'", txtMaNha.Text);
+            int count = Data_Provider.checkData(sql1);
+            if (count > 0)
+            {
+                MessageBox.Show("Mã nhà đã tồn tại.Vui lòng nhập mã khác!");
+            }
+            else
+            {
+                if (isNumber(txtGiaThue.Text) && !string.IsNullOrEmpty(txtTenChuNha.Text))
+                {
+
+                    string sql = "insert into NHA(MaNha,TenChuNha,GiaThue,DaCHoThue)" +
+                        "values(@maNha,@tenchunha,@giathue,@dachothue)";
+                    bool dachothue = rdDaThue.Checked == true ? true : false;
+                    object[] value = { txtMaNha.Text, txtTenChuNha.Text, txtGiaThue.Text, dachothue };
+                    string[] name = { "@maNha", "@tenchunha", "@giathue", "@dachothue" };
+
+                    Data_Provider.updateData(sql, value, name);
+                    Load_NHA();
+                }
+                else
+                    MessageBox.Show("Dữ liệu không hợp lệ!");
+            }
+            Data_Provider.dongKetNoi();
         }
 
         #region
@@ -113,6 +151,18 @@ namespace QLThueNha1
             Data_Provider.moKetNoi();
             Load_NHA();
             Data_Provider.dongKetNoi();
+        }
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dataGridView1.CurrentCell.RowIndex;
+            txtMaNha.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            txtTenChuNha.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            txtGiaThue.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            string dachothue = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            if (dachothue == "True")
+                rdDaThue.Checked = true;
+            else
+                rdChuaThue.Checked = true;
         }
     }
 }
