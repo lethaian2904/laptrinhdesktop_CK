@@ -15,6 +15,7 @@ namespace QLThueNha1
         private static SqlDataAdapter da;
         private static SqlCommand cmd;
 
+        //Kết nối đến CSDL
         public static void moKetNoi()
         {
             cnn = new SqlConnection();
@@ -22,11 +23,13 @@ namespace QLThueNha1
             cnn.Open();
         }
 
+        //Đóng kết nối
         public static void dongKetNoi()
         {
             cnn.Close();
         }
 
+        //Lấy dữ liệu từ Database đổ lên DataTable
         public static DataTable GetDataTable(string sql)
         {
             DataTable dt = new DataTable();
@@ -35,6 +38,7 @@ namespace QLThueNha1
             return dt;
         }
 
+        //Cập nhật dữ liệu
         public static void updateData(string sql, object[] value =null, string[] name = null)
         {
             cmd = new SqlCommand(sql, cnn);
@@ -47,6 +51,8 @@ namespace QLThueNha1
             cmd.ExecuteNonQuery();
             cmd.Dispose();
         }
+
+        //Kiểm tra khóa chính có trùng
         public static int checkData(string sql)
         {
             int i = 0;

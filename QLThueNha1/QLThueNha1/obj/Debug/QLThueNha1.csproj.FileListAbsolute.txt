@@ -1,0 +1,10 @@
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\bin\Debug\QLThueNha1.exe.config
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\bin\Debug\QLThueNha1.exe
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\bin\Debug\QLThueNha1.pdb
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.csproj.AssemblyReference.cache
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.frmThongTinNha.resources
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.Properties.Resources.resources
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.csproj.GenerateResource.cache
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.csproj.CoreCompileInputs.cache
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.exe
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.pdb
