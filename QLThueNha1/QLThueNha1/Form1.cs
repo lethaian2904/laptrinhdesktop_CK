@@ -32,6 +32,7 @@ namespace QLThueNha1
         private void LamMoi(object sender, EventArgs e)
         {
             txtMaNha.Clear();
+            txtMaNha.ReadOnly = false; // Mở khóa txtMaNha khi làm mới
             txtMaNha.Focus();
             txtTenChuNha.Clear();
             txtGiaThue.Clear();
@@ -72,6 +73,8 @@ namespace QLThueNha1
 
         private void Sua(object sender, EventArgs e)
         {
+            
+
             Data_Provider.moKetNoi();
             string sql1 = string.Format("Select count(*) from NHA where MaNha ='{0}'", txtMaNha.Text);
             int count = Data_Provider.checkData(sql1);
@@ -84,11 +87,10 @@ namespace QLThueNha1
                 if (isNumber(txtGiaThue.Text) && !string.IsNullOrEmpty(txtTenChuNha.Text))
                 {
 
-                    string sql = "insert into NHA(MaNha,TenChuNha,GiaThue,DaCHoThue)" +
-                        "values(@maNha,@tenchunha,@giathue,@dachothue)";
+                    string sql = string.Format("Update NHA set TenChuNha=@tenchunha,GiaThue=@giathue,DaCHoThue=@dachothue where MaNha='{0}'", txtMaNha.Text);
                     bool dachothue = rdDaThue.Checked == true ? true : false;
-                    object[] value = { txtMaNha.Text, txtTenChuNha.Text, txtGiaThue.Text, dachothue };
-                    string[] name = { "@maNha", "@tenchunha", "@giathue", "@dachothue" };
+                    object[] value = {  txtTenChuNha.Text, txtGiaThue.Text, dachothue };
+                    string[] name = {  "@tenchunha", "@giathue", "@dachothue" };
 
                     Data_Provider.updateData(sql, value, name);
                     Load_NHA();
@@ -97,6 +99,8 @@ namespace QLThueNha1
                     MessageBox.Show("Dữ liệu không hợp lệ!");
             }
             Data_Provider.dongKetNoi();
+
+            
         }
 
         #region
@@ -110,6 +114,9 @@ namespace QLThueNha1
         #endregion
         private void Them(object sender, EventArgs e)
         {
+            // Mở khóa txtMaNha khi thêm mới
+            txtMaNha.ReadOnly = false;
+
             Data_Provider.moKetNoi();
             string sql1 = string.Format("Select count(*) from NHA where MaNha ='{0}'", txtMaNha.Text);
             int count = Data_Provider.checkData(sql1);
@@ -152,8 +159,12 @@ namespace QLThueNha1
             Load_NHA();
             Data_Provider.dongKetNoi();
         }
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            
+
             int i = dataGridView1.CurrentCell.RowIndex;
             txtMaNha.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             txtTenChuNha.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
@@ -163,6 +174,10 @@ namespace QLThueNha1
                 rdDaThue.Checked = true;
             else
                 rdChuaThue.Checked = true;
+
+            // Khóa txtMaNha khi đang chỉnh sửa
+            txtMaNha.ReadOnly = true;
         }
+        
     }
 }
