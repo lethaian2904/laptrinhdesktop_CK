@@ -8,3 +8,5 @@ D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.csproj.Generate
 D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.csproj.CoreCompileInputs.cache
 D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.exe
 D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.pdb
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.frmQLHopDong.resources
+D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.frmMain.resources

@@ -16,7 +16,7 @@ namespace QLThueNha1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThongTinNha());
+            Application.Run(new frmMain());
         }
     }
 }
