@@ -10,3 +10,16 @@ D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.exe
 D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.pdb
 D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.frmQLHopDong.resources
 D:\laptrinhdesktop_CK\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.frmMain.resources
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\bin\Debug\QLThueNha1.exe.config
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\bin\Debug\QLThueNha1.exe
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\bin\Debug\QLThueNha1.pdb
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.csproj.AssemblyReference.cache
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.frmThongTinNha.resources
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.frmQLHopDong.resources
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.frmMain.resources
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.Properties.Resources.resources
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.csproj.GenerateResource.cache
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.csproj.CoreCompileInputs.cache
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.exe
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.pdb
+D:\ThaiAn\Lập trình desktop\laptrinhdesktop_\QLThueNha1\QLThueNha1\obj\Debug\QLThueNha1.frmQLKhachThueNha.resources
